@@ -22,11 +22,13 @@
 				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
 				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
 			</div>
-			<div class="social-icons">
-				<img src="../assets/images/icon/fb2.png">
-				<img src="../assets/images/icon/insta2.png">
-				<img src="../assets/images/icon/tt2.png">
-			</div>
+	<div class="social-icons">
+		<button id="facebookBtn">
+			<img src="../assets/images/icon/fb2.png">
+		</button>
+		<img src="../assets/images/icon/insta2.png">
+		<img src="../assets/images/icon/tt2.png">
+	</div>
 			
 			<!-- Login Form -->
 			<form id="login" class="input-group" action="index.html">
@@ -61,5 +63,6 @@
 			</form>
 		</div>
 		<script type="text/javascript" src="./script.js"></script>
+		<script type="module" src="../src/socialAuthentication/login.js" defer></script>
 </body>
 </html>
