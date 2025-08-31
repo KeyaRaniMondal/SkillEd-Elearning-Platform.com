@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
       signInWithPopup(auth, facebookProvider)
         .then((result) => {
           const user = result.user;
-          const credential = FacebookAuthProvider.credentialFromResult(result);
-          const accessToken = credential.accessToken;
           console.log("✅ Facebook Login Success:", user);
-          console.log("Facebook Access Token:", accessToken);
+
+          // Redirect to homepage
+          window.location.href = "/";
         })
         .catch((error) => {
           console.error("❌ Facebook login error:", error.code, error.message);
@@ -43,12 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
       signInWithPopup(auth, twitterProvider)
         .then((result) => {
           const user = result.user;
-          const credential = TwitterAuthProvider.credentialFromResult(result);
-          const accessToken = credential.accessToken;
-          const secret = credential.secret;
           console.log("✅ Twitter Login Success:", user);
-          console.log("Twitter Access Token:", accessToken);
-          console.log("Twitter Secret:", secret);
+
+          // Redirect to homepage
+          window.location.href = "/";
         })
         .catch((error) => {
           console.error("❌ Twitter login error:", error.code, error.message);
